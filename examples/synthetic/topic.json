@@ -1,0 +1,14 @@
+{
+  "topic": "实用 AI 系统如何从演示走进日常工作",
+  "column": "合成科技早报",
+  "audience": "关注科技但没有专业技术背景的读者",
+  "topic_reason": "用于离线全流程演示的完全合成选题。",
+  "risk_tags": ["synthetic_demo"],
+  "sources": [
+    {
+      "name": "合成演示数据集",
+      "url": "https://example.invalid/datasets/synthetic-demo",
+      "summary": "为文档与自动化测试原创的虚构记录。"
+    }
+  ]
+}

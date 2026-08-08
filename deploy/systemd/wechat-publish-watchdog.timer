@@ -1,0 +1,17 @@
+[Unit]
+Description=Verify WeChat Official Account publish outcome after the daily run
+
+[Timer]
+OnCalendar=*-*-* 09:10:00
+OnCalendar=*-*-* 09:20:00
+OnCalendar=*-*-* 09:30:00
+OnCalendar=*-*-* 09:45:00
+OnCalendar=*-*-* 10:00:00
+OnCalendar=*-*-* 10:20:00
+OnCalendar=*-*-* 11:00:00
+AccuracySec=30s
+Persistent=true
+Unit=wechat-publish-watchdog.service
+
+[Install]
+WantedBy=timers.target

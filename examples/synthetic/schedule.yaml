@@ -1,0 +1,18 @@
+base_config: ../../config/schedule.yaml
+
+runtime:
+  environment: demo
+  instance_id: synthetic-demo
+  allowed_instance_ids: []
+  allow_wechat_writes: false
+  allow_external_providers: false
+  config_version: synthetic-demo.v1
+
+final_review:
+  mode: disabled
+  auto_repair: false
+
+publishing:
+  mode: dry_run
+  publish_channel: freepublish
+  allow_low_risk_auto_publish: false

@@ -1,0 +1,9 @@
+[Unit]
+Description=Check WeChat Official Account publish outcome
+After=wechat-official-account-automation.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/srv/wechat-official-account-automation/current
+ExecStart=/srv/wechat-official-account-automation/venv/bin/python -m src.monitoring.publish_watchdog --output-root /srv/wechat-official-account-automation/shared/outputs --state-dir /srv/wechat-official-account-automation/shared/data/publish-state --env /srv/wechat-official-account-automation/shared/.env --schedule /srv/wechat-official-account-automation/shared/schedule.auto_publish.yaml --expected-by 09:30 --refresh-pending --notify --json
+TimeoutStartSec=90

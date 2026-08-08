@@ -1,0 +1,18 @@
+[Unit]
+Description=Prepare and freeze the daily WeChat content package and draft
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=10800
+StartLimitBurst=3
+
+[Service]
+Type=oneshot
+WorkingDirectory=/srv/wechat-official-account-automation/current
+ExecStart=/srv/wechat-official-account-automation/run-content-prepare.sh
+SuccessExitStatus=2
+Restart=on-failure
+RestartSec=120
+TimeoutStartSec=960
+Nice=5
+IOSchedulingClass=best-effort
+IOSchedulingPriority=6

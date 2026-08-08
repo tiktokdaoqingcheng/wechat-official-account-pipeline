@@ -1,0 +1,47 @@
+fixed_columns:
+  - name: AI 昨日速览
+    enabled: true
+    weight: 1.2
+  - name: AI 深聊延展
+    enabled: true
+    weight: 1.1
+  - name: AI 今日观察
+    enabled: true
+    weight: 1.0
+  - name: AI 新闻白话解读
+    enabled: true
+    weight: 1.0
+  - name: AI 工具与方法
+    enabled: true
+    weight: 0.9
+  - name: AI 新手教学
+    enabled: true
+    weight: 0.9
+  - name: AI 趋势深度拆解
+    enabled: true
+    weight: 0.7
+
+temporary_topic:
+  enabled: false
+  topic: ""
+  column: ""
+  reason: ""
+  expires_on: ""
+
+seed_topics:
+  - 昨天 AI 界发生了什么
+  - 昨天讨论确定的内容
+  - AI 新闻对普通人的影响
+  - 最新 AI 工具怎么用
+  - AI 视频、AI 图片、AI 写作、AI 编程的实际玩法
+  - 大模型、智能体、多模态、自动化的白话解释
+  - 普通人如何用 AI 提高工作效率
+  - AI 行业热点背后的真实含义
+
+blocked_topics:
+  - 医疗诊断
+  - 法律定性
+  - 投资荐股
+  - 政治敏感事件
+  - 保证收益
+  - 未证实爆料

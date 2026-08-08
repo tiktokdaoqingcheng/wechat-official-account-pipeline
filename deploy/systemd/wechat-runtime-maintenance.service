@@ -1,0 +1,8 @@
+[Unit]
+Description=Prune expired WeChat automation outputs and old releases
+
+[Service]
+Type=oneshot
+ExecStart=/srv/wechat-official-account-automation/prune-runtime-artifacts.sh
+Nice=10
+IOSchedulingClass=idle

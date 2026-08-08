@@ -1,0 +1,41 @@
+timezone: Asia/Shanghai
+target_window: previous_day
+max_items: 8
+reserve_items: 12
+max_items_per_source: 3
+minimum_successful_sources: 1
+request_timeout_seconds: 12
+fetch_workers: 4
+user_agent: wechat-official-account-automation/0.1
+
+preferred_keywords:
+  - smart manufacturing
+  - robotics
+  - automation
+  - factory
+  - 智能制造
+  - 智能工厂
+  - 机器人
+  - 自动化
+  - 量产
+
+blocked_keywords:
+  - stock pick
+  - price prediction
+  - gambling
+  - 荐股
+  - 保证收益
+
+# These synthetic feeds are intentionally disabled. Add only sources whose
+# access terms and content licences you have reviewed.
+sources:
+  - name: Example Manufacturing Feed
+    url: https://example.invalid/manufacturing.xml
+    enabled: false
+    tier: editorial
+    weight: 1.0
+  - name: Example Robotics Vendor Feed
+    url: https://example.invalid/robotics.xml
+    enabled: false
+    tier: official
+    weight: 0.9

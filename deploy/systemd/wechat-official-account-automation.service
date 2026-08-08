@@ -1,0 +1,16 @@
+[Unit]
+Description=WeChat Official Account daily AI automation
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=900
+StartLimitBurst=3
+
+[Service]
+Type=oneshot
+WorkingDirectory=/srv/wechat-official-account-automation/current
+ExecStart=/srv/wechat-official-account-automation/run-daily-auto-publish.sh
+SuccessExitStatus=2
+TimeoutStartSec=240
+Nice=5
+IOSchedulingClass=best-effort
+IOSchedulingPriority=6

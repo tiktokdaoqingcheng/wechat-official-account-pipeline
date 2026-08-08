@@ -1,0 +1,43 @@
+timezone: Asia/Shanghai
+target_window: previous_day
+max_items: 10
+reserve_items: 20
+max_items_per_source: 3
+minimum_successful_sources: 1
+request_timeout_seconds: 12
+fetch_workers: 4
+user_agent: wechat-official-account-automation/0.1
+
+preferred_keywords:
+  - artificial intelligence
+  - agent
+  - robotics
+  - chips
+  - cloud
+  - 人工智能
+  - 智能体
+  - 机器人
+  - 芯片
+
+blocked_keywords:
+  - stock pick
+  - price prediction
+  - giveaway
+  - gambling
+  - 荐股
+  - 保证收益
+
+# All feeds are disabled in the public starter configuration. Replace these
+# synthetic URLs with feeds you are permitted to use, review their terms, and
+# enable them explicitly. The offline synthetic demo does not fetch any feed.
+sources:
+  - name: Example Technology Feed
+    url: https://example.invalid/technology.xml
+    enabled: false
+    tier: editorial
+    weight: 1.0
+  - name: Example AI Vendor Feed
+    url: https://example.invalid/vendor-ai.xml
+    enabled: false
+    tier: official
+    weight: 0.9

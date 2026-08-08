@@ -1,0 +1,14 @@
+[Unit]
+Description=Private WeChat automation API config page
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/srv/wechat-official-account-automation/current
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/srv/wechat-official-account-automation/venv/bin/python -m src.integrations.config_server --env /srv/wechat-official-account-automation/shared/.env --schedule /srv/wechat-official-account-automation/shared/schedule.auto_publish.yaml --topics /srv/wechat-official-account-automation/shared/topics.yaml --news-sources /srv/wechat-official-account-automation/shared/news-sources.yaml --output-root /srv/wechat-official-account-automation/shared/outputs --state-dir /srv/wechat-official-account-automation/shared/data/publish-state --current-release /srv/wechat-official-account-automation/current --host 127.0.0.1 --port 8765 --no-open
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

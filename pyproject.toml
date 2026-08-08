@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wechat-official-account-automation"
+version = "0.1.0"
+description = "Auditable, human-in-the-loop automation for WeChat Official Accounts."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{ name = "daoqingcheng" }]
+dependencies = [
+  "requests>=2.32.0",
+  "PyYAML>=6.0.0",
+  "Pillow>=10.4.0",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Communications",
+]
+
+[project.urls]
+Homepage = "https://github.com/tiktokdaoqingcheng/wechat-official-account-pipeline"
+Documentation = "https://github.com/tiktokdaoqingcheng/wechat-official-account-pipeline/tree/main/docs"
+Issues = "https://github.com/tiktokdaoqingcheng/wechat-official-account-pipeline/issues"
+Security = "https://github.com/tiktokdaoqingcheng/wechat-official-account-pipeline/security/policy"
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+exclude = [".git", ".venv", "build", "dist", "outputs"]
+
+[tool.ruff.lint]
+select = ["E9", "F63", "F7", "F82"]

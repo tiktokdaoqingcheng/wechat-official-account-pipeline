@@ -1,0 +1,11 @@
+[Unit]
+Description=Submit the frozen WeChat draft at the example local publish time
+
+[Timer]
+OnCalendar=*-*-* 09:00:00
+AccuracySec=30s
+Persistent=true
+Unit=wechat-official-account-automation.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,22 @@
+base_config: schedule.yaml
+
+# This file is deliberately non-publishing. Create a private local override and
+# enable each capability only after completing the production checklist.
+runtime:
+  environment: production
+  instance_id: replace-with-your-host-id
+  allowed_instance_ids: []
+  allow_wechat_writes: false
+  allow_external_providers: false
+  config_version: public.v0.1.0
+
+daily_run:
+  enabled: true
+  paused: false
+  max_prepare_attempts_per_day: 3
+
+publishing:
+  mode: dry_run
+  publish_channel: freepublish
+  allow_low_risk_auto_publish: false
+  require_human_confirmation_for_medium_risk: true

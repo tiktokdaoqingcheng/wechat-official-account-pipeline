@@ -1,0 +1,21 @@
+auto_publish:
+  require_low_risk: true
+  block_if_fact_uncertain: true
+  block_if_sensitive_topic: true
+  block_if_image_source_unknown: true
+  block_if_duplicate_today: true
+
+risk_levels:
+  low:
+    action: allow_draft
+  medium:
+    action: hold_for_review
+  high:
+    action: reject_and_rewrite
+
+blocked_claim_types:
+  - medical_advice
+  - legal_advice
+  - investment_advice
+  - guaranteed_income
+  - political_assertion

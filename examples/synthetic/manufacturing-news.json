@@ -1,0 +1,57 @@
+{
+  "schema_version": "news_seed.v1",
+  "generated_at": "2000-01-02T08:00:00+08:00",
+  "target_date": "2000-01-01",
+  "topic": "合成智能制造日报",
+  "column": "智能制造日报",
+  "audience": "关注产业技术落地的普通读者",
+  "topic_reason": "用于离线演示的合成输入。",
+  "risk_tags": ["synthetic_demo"],
+  "news_status": "ok",
+  "news_items": [
+    {
+      "title": "兰花机器人在示范仓库启动托盘分拣试点",
+      "source_name": "示例制造编辑部",
+      "url": "https://example.invalid/manufacturing/orchid-pilot",
+      "published_at": "2000-01-01T08:45:00+08:00",
+      "summary": "虚构企业兰花机器人在一座示范仓库启动为期四周的托盘分拣试点。路线变更必须由现场主管批准，系统也会记录每次人工接管。试验将对比新旧流程的吞吐量、货损与干预时间。"
+    },
+    {
+      "title": "山岳汽车将视觉质检结果接入返修队列",
+      "source_name": "示例工厂周刊",
+      "url": "https://example.invalid/manufacturing/summit-inspection",
+      "published_at": "2000-01-01T12:10:00+08:00",
+      "summary": "虚构企业山岳汽车在一条示范产线上把视觉质检站接入返修队列。疑似缺陷会与原始图片一同保存，没有技术人员决定就不能关闭工单。试点重点是提升可追溯性，而不是替代最终检验。"
+    },
+    {
+      "title": "灯塔零部件公布数字孪生维护实验",
+      "source_name": "示例产业评论",
+      "url": "https://example.invalid/manufacturing/lighthouse-twin",
+      "published_at": "2000-01-01T14:25:00+08:00",
+      "summary": "虚构企业灯塔零部件公布针对三台包装设备的数字孪生维护实验方案。试验会把传感器读数、预测故障和技术人员最终诊断写入同一条审计记录。六个月对比完成前，项目不会宣称已经节省生产成本。"
+    },
+    {
+      "title": "雨峰自动化演示面向小型工厂的受控排产助手",
+      "source_name": "示例自动化周刊",
+      "url": "https://example.invalid/manufacturing/rainier-scheduling",
+      "published_at": "2000-01-01T16:30:00+08:00",
+      "summary": "虚构企业雨峰自动化使用合成订单和设备可用时间演示排产助手。助手可以提出方案，但在计划员确认前不能写入生产系统。演示会同时记录排产冲突、被拒绝建议与最终接受的调整。"
+    }
+  ],
+  "reserve_news_items": [
+    {
+      "title": "榆木工坊在两条示范产线测试统一事件日志",
+      "source_name": "示例运营笔记",
+      "url": "https://example.invalid/manufacturing/elm-event-log",
+      "published_at": "2000-01-01T17:10:00+08:00",
+      "summary": "虚构企业榆木工坊测试一套统一记录告警、维护动作和操作员备注的事件格式。该合成实验用于简化两条示范产线之间的事故复盘。"
+    }
+  ],
+  "sources": [],
+  "source_quality": {
+    "successful_sources": 4,
+    "minimum_successful_sources": 1,
+    "event_duplicates_removed": 0
+  },
+  "diagnostics": []
+}

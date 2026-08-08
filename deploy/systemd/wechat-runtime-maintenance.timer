@@ -1,0 +1,11 @@
+[Unit]
+Description=Run WeChat automation retention maintenance weekly
+
+[Timer]
+OnCalendar=Mon *-*-* 02:40:00
+RandomizedDelaySec=15m
+Persistent=true
+Unit=wechat-runtime-maintenance.service
+
+[Install]
+WantedBy=timers.target

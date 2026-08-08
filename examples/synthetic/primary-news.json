@@ -1,0 +1,71 @@
+{
+  "schema_version": "news_seed.v1",
+  "generated_at": "2000-01-02T08:00:00+08:00",
+  "target_date": "2000-01-01",
+  "topic": "合成科技早报",
+  "column": "科技早报",
+  "audience": "普通科技读者",
+  "topic_reason": "用于离线演示的合成输入。",
+  "risk_tags": ["synthetic_demo"],
+  "news_status": "ok",
+  "news_items": [
+    {
+      "title": "星云实验室向小型设计团队开放任务规划助手",
+      "source_name": "示例科技编辑部",
+      "url": "https://example.invalid/technology/aurora-assistant",
+      "published_at": "2000-01-01T09:10:00+08:00",
+      "summary": "虚构企业星云实验室推出一款面向五十人以下设计团队的任务规划助手。试点会连接项目简报、评审记录和交付清单，但所有对外操作都必须由人员确认。首轮评估持续八周，重点记录节省时间与人工纠错率。"
+    },
+    {
+      "title": "北辰计算公布模块化推理机柜能耗数据",
+      "source_name": "示例基础设施周刊",
+      "url": "https://example.invalid/infrastructure/northstar-rack",
+      "published_at": "2000-01-01T10:20:00+08:00",
+      "summary": "虚构企业北辰计算公布面向区域数据中心的模块化推理机柜测试数据。报告比较了三种工作负载下的功耗，并说明运营人员如何复核测量过程。相关数字尚未完成独立验证，因此只能作为阶段性结果。"
+    },
+    {
+      "title": "海港大学发布多语言智能体开放评测集",
+      "source_name": "示例研究简报",
+      "url": "https://example.invalid/research/harbor-agent-evaluation",
+      "published_at": "2000-01-01T11:30:00+08:00",
+      "summary": "虚构机构海港大学发布一套覆盖六种语言的智能体评测集，任务包括日程安排、文档检索和客服转交。每项任务都会记录模型是否标注来源，以及审核者是否接受结果。团队计划在每次更新时同步公布基准分数与已知限制。"
+    },
+    {
+      "title": "青杉办公为会议工作区加入来源链接摘要",
+      "source_name": "示例产品通讯",
+      "url": "https://example.invalid/products/cedar-source-links",
+      "published_at": "2000-01-01T13:40:00+08:00",
+      "summary": "虚构软件厂商青杉办公为会议工作区加入带来源链接的摘要。用户可以打开每条结论对应的原始转写片段，并在分享前标记缺少依据的说法。功能先向小范围测试用户开放，未经确认不会发送消息或创建任务。"
+    },
+    {
+      "title": "枫叶安全提出AI工作流故障通用事故格式",
+      "source_name": "示例安全评论",
+      "url": "https://example.invalid/security/maple-incident-format",
+      "published_at": "2000-01-01T15:00:00+08:00",
+      "summary": "虚构机构枫叶安全提出一套自动化工作流故障报告格式。模板将模型输出、工具执行、人工批准和外部副作用分开记录，便于调查人员还原过程。该格式会先进入公开征求意见阶段，再决定是否形成稳定版本。"
+    },
+    {
+      "title": "蓝鸟终端测试面向外勤人员的端侧文档分类",
+      "source_name": "示例终端报告",
+      "url": "https://example.invalid/devices/bluebird-classification",
+      "published_at": "2000-01-01T16:15:00+08:00",
+      "summary": "虚构厂商蓝鸟终端为外勤服务团队启动小规模端侧文档分类试验。样本文件只保留在设备本地，系统会记录工作人员何时修改建议分类。项目会先复核准确率和人工改动，再决定是否扩大开放范围。"
+    }
+  ],
+  "reserve_news_items": [
+    {
+      "title": "杜松设计发布生成式图表审核清单",
+      "source_name": "示例设计笔记",
+      "url": "https://example.invalid/design/juniper-checklist",
+      "published_at": "2000-01-01T17:20:00+08:00",
+      "summary": "虚构机构杜松设计发布一份生成式图表审核清单，覆盖标签、比例、数据来源和无障碍要求。清单要求发布前指定审核人员。本条作为流水线恢复测试使用的合成备用新闻。"
+    }
+  ],
+  "sources": [],
+  "source_quality": {
+    "successful_sources": 6,
+    "minimum_successful_sources": 1,
+    "event_duplicates_removed": 0
+  },
+  "diagnostics": []
+}

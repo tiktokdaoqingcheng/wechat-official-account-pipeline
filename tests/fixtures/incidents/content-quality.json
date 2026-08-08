@@ -1,0 +1,100 @@
+{
+  "cases": [
+    {
+      "name": "media byline is removed from article title",
+      "article": {
+        "title": "记者丨赵甲 编辑丨钱乙；示例模型公司发布新工具丨科技早报",
+        "source_policy": "tech_briefing",
+        "news_items": []
+      },
+      "expected": {
+        "absent": ["记者丨", "编辑丨"],
+        "contains": ["示例模型公司发布新工具丨科技早报"]
+      }
+    },
+    {
+      "name": "token factory typo is repaired beside Chinese text",
+      "article": {
+        "title": "技术动态丨科技早报",
+        "source_policy": "tech_briefing",
+        "news_items": [
+          {
+            "title": "Token Factory architecture",
+            "source_name": "Example Developer Desk",
+            "detail_heading": "Example Developer Desk解读Toekn Factory技术进展",
+            "reader_summary": "公开报道介绍了Toekn Factory的技术架构和应用范围。"
+          }
+        ]
+      },
+      "expected": {
+        "absent": ["Toekn"],
+        "contains": ["Token Factory"]
+      }
+    },
+    {
+      "name": "generic English question word is not used as Chinese subject",
+      "article": {
+        "title": "算力动态丨科技早报",
+        "source_policy": "tech_briefing",
+        "news_items": [
+          {
+            "title": "Would you host part of an AI data center in your home?",
+            "source_name": "Example Technology Desk",
+            "summary": "A home energy company is testing distributed AI compute units.",
+            "detail_heading": "Would发布AI算力服务",
+            "reader_summary": "Would发布AI算力服务。",
+            "fact_card": {
+              "subject": "家庭能源企业",
+              "action": "测试分布式AI算力设备",
+              "facts": ["一家家庭能源企业正在测试分布式AI算力设备", "试点设备部署在参与用户住宅中"]
+            }
+          }
+        ]
+      },
+      "expected": {
+        "absent": ["Would发布"],
+        "contains": ["家庭能源企业", "住宅"]
+      }
+    },
+    {
+      "name": "promotional residue is removed",
+      "article": {
+        "title": "产品动态丨科技早报",
+        "source_policy": "tech_briefing",
+        "news_items": [
+          {
+            "title": "某公司发布新产品",
+            "source_name": "公开来源",
+            "detail_heading": "某公司发布面向企业的新产品",
+            "reader_summary": "某公司发布面向企业的新产品，并公布首批应用范围。欢迎关注示例媒体官方微信公众号，更多精彩内容第一时间为您奉上。"
+          }
+        ]
+      },
+      "expected": {
+        "absent": ["欢迎关注", "更多精彩内容"],
+        "contains": ["某公司发布面向企业的新产品"]
+      }
+    },
+    {
+      "name": "high-risk fraud combination is blocked while normal product news is retained",
+      "article": {
+        "title": "安全与产品动态丨科技早报",
+        "source_policy": "tech_briefing",
+        "news_items": []
+      },
+      "platform_risk_items": [
+        {
+          "title": "跨境网络犯罪团伙被起诉",
+          "summary": "该团伙被指利用AI向数百万受害者发送大规模诈骗短信"
+        },
+        {
+          "title": "工业软件公司发布新版本",
+          "summary": "新版本增加产线排程和设备维护功能"
+        }
+      ],
+      "expected": {
+        "platform_risks": [true, false]
+      }
+    }
+  ]
+}

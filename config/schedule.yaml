@@ -1,0 +1,70 @@
+timezone: Asia/Shanghai
+
+runtime:
+  environment: local
+  instance_id: local-workstation
+  allowed_instance_ids: []
+  allow_wechat_writes: false
+  allow_external_providers: false
+  config_version: public.v0.1.0
+
+final_review:
+  mode: enforce
+  auto_repair: true
+  max_recovery_cycles: 1
+  minimum_cycle_budget_seconds: 45
+  min_news_items:
+    primary: 5
+    secondary: 3
+
+daily_run:
+  enabled: true
+  paused: false
+  controller_start_time: "09:00"
+  topic_time: "06:00"
+  draft_time: "06:10"
+  image_time: "06:25"
+  review_time: "06:40"
+  draft_upload_time: "06:45"
+  publish_time: "09:00"
+  max_runtime_seconds: 840
+  publish_reserve_seconds: 120
+  max_prepare_attempts_per_day: 3
+  max_text_model_calls_per_attempt: 28
+  max_text_model_calls_per_day: 36
+
+daily_content_package:
+  article_count: 2
+  primary_article:
+    role: main
+    column: AI 昨日速览
+    topic: 昨天 AI 界发生了什么
+    source_window: previous_day
+    purpose: 汇总并解释昨天 AI 行业最值得普通读者关注的变化。
+  secondary_article:
+    role: companion
+    column: 智能制造日报
+    topic: 智能制造日报
+    source_window: previous_day_manufacturing_news
+    purpose: 第二篇固定整理智能制造、机器人、工业AI、低空经济和产业落地新闻。
+
+publishing:
+  # Modes:
+  # - dry_run: generate local article/review/report only; never touches WeChat publishing.
+  # - draft_only: create or update WeChat draft only; never publishes.
+  # - manual_confirm: prepare publish request but require explicit operator confirmation.
+  # - auto_publish_low_risk: publish automatically only when review risk is low and all gates pass.
+  mode: dry_run
+  # Publish channels:
+  # - freepublish: publish articles without notifying all followers.
+  # - mass_send_all: send the mpnews draft to all followers through the mass-send API.
+  publish_channel: freepublish
+  max_articles_per_day: 2
+  allow_low_risk_auto_publish: false
+  require_human_confirmation_for_medium_risk: true
+  reject_high_risk: true
+  allow_image_fallback_for_publish: true
+  require_frozen_package: true
+  mass_send_ignore_reprint: false
+  retry_count: 2
+  retry_delay_minutes: 10
