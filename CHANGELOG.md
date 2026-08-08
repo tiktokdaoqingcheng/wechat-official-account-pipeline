@@ -4,9 +4,9 @@ All notable changes will be documented in this file. The format follows Keep a C
 
 ## [Unreleased]
 
-- Public repository creation, visibility change and release publication remain pending owner approval.
+No changes yet.
 
-## [0.1.0] - Release candidate
+## [0.1.0] - 2026-08-08
 
 ### Added
 

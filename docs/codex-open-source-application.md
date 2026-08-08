@@ -58,7 +58,7 @@ The open-source candidate itself was prepared with Codex-assisted history auditi
 
 ### Months 1-2: public baseline and contributor safety
 
-- Publish v0.1.0 after owner approval and independent secret review.
+- Maintain the v0.1.0 public baseline after owner approval and independent secret review.
 - Triage installation and documentation issues.
 - Add schema documentation and safer configuration diagnostics.
 - Establish a reproducible security-reporting and release process.

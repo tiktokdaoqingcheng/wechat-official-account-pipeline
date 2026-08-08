@@ -4,7 +4,9 @@ Audit date: **2026-08-08**
 
 ## Decision
 
-The original private repository must not be made public and its history must not be reused for the public project. A separate clean-history candidate was created locally with no remote.
+The original private repository must not be made public and its history must not be reused for the public project. A separate public repository was created from the reviewed, sanitised candidate without importing the private production history:
+
+`https://github.com/tiktokdaoqingcheng/wechat-official-account-pipeline`
 
 No verified production credential was found in tracked Git history. However, the private history contains operational metadata that is inappropriate for publication, including production paths, host information, publish receipts, message identifiers, real article URLs and detailed incident/deployment records. Ignored runtime directories also contain credentials, generated articles, logs and databases.
 
@@ -56,7 +58,7 @@ The candidate was validated on 2026-08-08 in a fresh Python 3.12 virtual environ
 - Frozen artifact manifest: verified.
 - Demo screenshot: manually reviewed for synthetic-only content.
 
-Python 3.11 is included in the GitHub Actions matrix but was not available for a local run. CI cannot execute until the new public remote is created.
+The public repository then passed the complete GitHub Actions matrix on Python 3.11 and 3.12. Both jobs ran the public-tree checker, compilation, Ruff, all 316 tests and the fixed-date synthetic demo.
 
 ## Owner decisions completed
 
@@ -65,10 +67,9 @@ Python 3.11 is included in the GitHub Actions matrix but was not available for a
 - The private security contact is `gpt@tiktok111.com`.
 - Public repository creation and v0.1.0 publication are approved after successful release checks.
 
-## Remaining release gates
+## Remaining repository controls
 
-- Create the independent public repository without importing the private history.
-- Final independent secret/history scan after the release-preparation commit.
-- Run the Python 3.11 and 3.12 GitHub Actions matrix.
-- Verify public links, repository settings and the synthetic screenshot.
-- Create the v0.1.0 tag and Release only after all checks pass.
+- Apply the documented repository topics and full description in GitHub settings.
+- Enable private vulnerability reporting and GitHub Security Advisories.
+- Protect `main`, require pull requests and require the CI check when the repository plan and owner settings permit it.
+- Keep production secrets, real content, deployment evidence and private incident history outside this repository.
